@@ -18,7 +18,8 @@ class Character:
     
     if args:
       fields = ','.join(args)
-    
-    return fetch_asset(asset_path('character', self.realm, self.character), fields)
+  
+    self.data = fetch_asset(asset_path('character', self.realm, self.character), fields)
+    return self.data
 
 
